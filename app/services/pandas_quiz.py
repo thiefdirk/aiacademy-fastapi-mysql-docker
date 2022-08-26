@@ -69,6 +69,8 @@ class Pandas_Quiz(object):
         
         '''
     def q4(self):
+       
+        
         index_list = []
         score_list = []
         index_break = 0
@@ -84,9 +86,9 @@ class Pandas_Quiz(object):
             score_list.append(self.score)
             score_break += 1
             
+        self.id = ''.join(random.sample(string.ascii_letters, 5)) # 알파벳 5자리 ID 로 표기
+        self.score = random.randint(0, 100) # 0 ~ 100 사이의 점수    
         dataframe = pd.DataFrame({'국어': score_list[0:10], '영어': score_list[10:20], '수학': score_list[20:30], '사회': score_list[30:40]}, index=index_list)
-
-
         ic(self.id)
         ic(self.score)
         ic(dataframe)
