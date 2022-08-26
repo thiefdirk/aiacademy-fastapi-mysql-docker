@@ -1,11 +1,11 @@
 from app.models.user import User
+from app.schemas.user import Loginsequence
 
 class UserService(object): 
-    def __init__(self) -> None: # 생성자
+    def __init__(self) -> None: 
         pass
         
         
-    def useraccount(self, id, password): 
-        user = User(id, password)
-        print(f'아이디: {id}')
-        print(f'패스워드: {password}')
+    def login(self, id, password): 
+        loginsequence = Loginsequence()
+        loginsequence.login(id, password)

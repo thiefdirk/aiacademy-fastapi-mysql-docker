@@ -3,5 +3,5 @@ class User(object):
         self.id = id
         self.password = password
 
-    def useraccount(self):
+    def user_account(self):
         return self.id, self.password
