@@ -1,5 +1,5 @@
 from dataclasses import dataclass # dataclass 
-
+@dataclass # decorator
 class Context:
     path: str
     fname: str
