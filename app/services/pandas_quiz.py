@@ -118,7 +118,7 @@ class Pandas_Quiz(object):
     def q6(self, id):
         print(f'{id}의 성적출력')
         score = self.q4()
-        print(score.iloc[0])
+        print(score.iloc[0]) 
         
     def q7(self):
         score = self.q4()

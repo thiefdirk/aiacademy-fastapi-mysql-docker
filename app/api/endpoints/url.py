@@ -1,11 +1,12 @@
 from app.services.calculator import CalculatorService
+from app.services.titanic import TitanicService
 from app.services.user import UserService
 from app.services.grade import GradeService
 from app.services.pandas_quiz import Pandas_Quiz
 from app.services.ddarung import DDarungService
 import icecream as ic
 from app.constants.menus import LOGIN, LOGOUT, CALCULATOR, GRADE, \
-    QUIZ_1, QUIZ_2, QUIZ_3, QUIZ_4, QUIZ_5, QUIZ_6, QUIZ_7, DDARUNG
+    QUIZ_1, QUIZ_2, QUIZ_3, QUIZ_4, QUIZ_5, QUIZ_6, QUIZ_7, DDARUNG, TITANIC
 class Url:
     
     def router(self, menu):
@@ -27,6 +28,8 @@ class Url:
         elif menu == DDARUNG: DDarungService().submit(
             path='data/', train='train.csv', test='test.csv'
         )
+        elif menu == TITANIC: TitanicService().submit(
+                path='data/titanic/',train='train.csv', test='test.csv')
         elif menu == QUIZ_1: Pandas_Quiz().q1()
         elif menu == QUIZ_2: Pandas_Quiz().q2()
         elif menu == QUIZ_3: Pandas_Quiz().q3()
