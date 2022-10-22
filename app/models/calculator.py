@@ -1,5 +1,5 @@
 class Calculator(object):
-    def __init__(self, first, second): # self is the instance of the class, __init__ is the constructor
+    def __init__(self, first, second):
         self.first = first
         self.second = second
     
